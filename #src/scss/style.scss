@@ -144,6 +144,9 @@ body {
 		align-self: flex-start;
 		flex: 0 0 math.div(494, 1240)*100%;
 		@include adaptiv-value("margin-bottom", 80, 15, 1);
+		@media (max-width: $md2+px){
+			margin: 0 -15px;
+		}
 	}
 	// .main-slider__slider
 	&__slider {
@@ -210,17 +213,26 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-
+	@media (max-width: $md2+px){
+		align-items: stretch;
+		flex-direction: column-reverse;
+	}
 	// .slider-main__controls
 	&__controls {
 		align-self: stretch;
 		margin-bottom: 20px;
+		@media (max-width: $md2+px){
+			margin: 15px 0;
+		}
 	}
 	// .slider-main__body
 	&__body {
 		overflow: visible;
 		@media (min-width: $md2+px){
 			@include adaptiv-value("width", 934, 290, 1);
+		}
+		@media (max-width: $md2+px){
+			margin: 0 -15px;
 		}
 	}
 	// .slider-main__slide
@@ -236,7 +248,6 @@ body {
 		min-width: 295px;
 		max-height: 300px;
 		overflow: auto;
-		position: absolute;
 		color: inherit;
 		display: flex;
 		flex-direction: column;
@@ -293,9 +304,18 @@ body {
 	// .controls-slider-main__dotts
 	&__dotts {
 		flex: 1 1 auto;
+		@media (min-width: $md2+px){
+			padding-right: 15px;
+		}
+		@media (max-width: $md2+px){
+			justify-content: center;
+		}
 	}
 	// .controls-slider-main__arrows
 	&__arrows {
+		@media (max-width: $md2+px){
+		display: none;
+		}
 	}
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
