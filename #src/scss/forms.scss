@@ -25,6 +25,31 @@
 	text-align: center;
 	transition: all 0.3s ease 0s;
 	min-height: 48px;
+	// .btn_white
+	&_white {
+		color: $greenColor;
+		background-color: #fff;
+		@media (any-hover: hover){
+			&:hover{
+				background-color: $greenColor;
+				color: #fff;
+			}
+		}
+		@media (any-hover: none){
+			background-color: $greenColor;
+			color: #fff;
+		}
+	}
+	&_green {
+		color: $greenColor;
+		border: 1px solid $greenColor;
+		font-weight: 600;
+		padding: 12px 82px;
+		&:hover{
+			color: #fff;
+			background-color: $greenColor;
+		}
+	}
 }
 //</BUTTONS>====================================================================================================
 
