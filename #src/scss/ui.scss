@@ -24,6 +24,7 @@
 	color: #000;
 }
 .slider-arrows {
+	pointer-events: auto;
 	display: grid;
 	grid-template-columns: repeat(2, 48px);
 	column-gap: 8px;
